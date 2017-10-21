@@ -1,0 +1,12 @@
+    
+   <div className="flip-container">
+    <div className="flipper">
+      <div className='back'>
+        <img src ={DeckImages.Back}/>
+      </div>
+      <div className='face'><img src ={DeckImages.Hearts.Two} />
+        
+      </div>
+      </div>
+    </div> 
+    </div>
