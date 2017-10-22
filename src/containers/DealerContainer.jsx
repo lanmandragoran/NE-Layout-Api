@@ -1,34 +1,24 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 import fetch from 'isomorphic-fetch'
 
 class DealerContainer extends Component {
     constructor(props){
         super(props)
-        this.state = {
-            opponentImage: ''
-        }
+        this.opponentImage = props.opponentImage
     }
-
-    componentDidMount(){
-        fetch(`https://robohash.p.mashape.com/index.php?text=${this.props.opponentName}`, {
-            method: 'post',
-            headers: {
-                'X-Mashape-Key': 'RQwcdT4a3OmshfKbItKrRz6yrTwhp1CgFIKjsnm5Dho1e00ThX',
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(json => {this.setState({opponentImage: json.imageUrl})});
-    }
-
     render() {
         return (
             <div>
-                <img src={this.state.opponentImage}/>
+                <img src={this.opponentImage}/>
             </div>
         )
     }
+}
+
+DealerContainer.propTypes = {
+    opponentImage: PropTypes.string.isRequired
 }
 
 export default DealerContainer
