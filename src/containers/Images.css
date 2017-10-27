@@ -1,5 +1,5 @@
 /* entire container, keeps perspective */
-.table {
+/*.table {
     width: 90%;
     height: 80%;
     margin-left: 5%;
@@ -21,3 +21,45 @@
     width: 5%;
     height: 5%;
 }
+*/
+
+.anim-enter {
+    opacity: 0.01;
+  }
+   
+  .anim-enter.anim-enter-active {
+    opacity: 2;
+    transition: opacity 5s ease-in;
+  }
+
+  .ele {
+        animation: deal 2s;
+      background-color: transparent;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+  }
+
+  
+  @keyframes deal {
+    0% {
+          transform: translate(5px, 50px);
+    }
+    16.5% {
+        transform: translate(10px, 100px);
+    }
+    33% {
+        transform: translate(15px, 150px);
+    }
+    49.5% {
+        transform: translate(20px, 200px);
+    }
+      66% {
+        transform: translate(25px, 250px);
+      }
+      82% {
+        transform: translate(30px, 300px);
+      }
+      100% {
+        transform: translate(35px, 350px);
+      }
+  }

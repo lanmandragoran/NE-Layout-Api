@@ -14,12 +14,16 @@
     "test": "export NODE_ENV=test && jest"
   },
   "dependencies": {
+    "animate-css-styled-components": "0.0.20",
+    "gsap": "^1.20.3",
     "isomorphic-fetch": "^2.2.1",
     "node-sass": "^4.3.0",
-    "react": "16.0.0",
+    "react": "^15.4.2",
+    "react-addons-transition-group": "^15.6.2",
     "react-card-flip": "^0.1.1",
-    "react-dom": "16.0.0",
+    "react-dom": "^15.4.2",
     "react-motion": "^0.5.2",
+    "react-transition-group": "^2.2.1",
     "sass-loader": "^6.0.2",
     "styled-components": "^2.2.1"
   },

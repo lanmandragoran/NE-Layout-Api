@@ -3,6 +3,7 @@ import ReactDOM from 'react'
 import fetch from 'isomorphic-fetch'
 import DealerContainer from './DealerContainer'
 import GameTable from './GameTable'
+import DealerPile from './DealerPile'
 
 class Game extends Component{
     constructor(props){
@@ -31,10 +32,6 @@ class Game extends Component{
         })
         .then(response => response.json())
         .then(json => {this.setState({opponentImage: json.imageUrl})})
-
-        fetch(`https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=${this.state.numDecks}`)
-        .then(response => response.json())
-        .then(json => this.setState({deckId: json.deck_id, hasId: true}))
     }
 
     componentShouldUpdate(prevProps) {
@@ -44,10 +41,14 @@ class Game extends Component{
     render() {
         const oppImage = this.state.opponentImage
         const deckIdentifier = this.state.deckId
+        const opponentName = this.state.opponentName
         return (
             <div>
-                <div style={{position: 'absolute', marginLeft: '35%', marginTop: '-4.5%', zIndex: '5'}}>
-                   { oppImage ? <DealerContainer opponentImage={oppImage}/> : <h1 style={{color: 'white'}}>'Opponent Rendering'</h1> }
+                <div style={{position: 'absolute', marginLeft: '35%', marginTop: '-4.5%', zIndex: '5', height:'27%', width: '27%'}}>
+                   { oppImage ? <DealerContainer opponentName={opponentName} opponentImage={oppImage}/> : <h1 style={{color: 'white'}}>'Opponent Rendering'</h1> }
+                </div>
+                <div style={{position: 'absolute', marginLeft: '30%', marginTop: '19%', zIndex: '5', width: '7.5%', height: '7.5%'}}>
+                    <DealerPile/>
                 </div>
                     <div>
                         {deckIdentifier ? <h1 style={{color: 'white'}}>{`Deck ID: ${deckIdentifier}`}</h1> : <h1 style={{color: 'white'}}> 'Waiting on Deck' </h1> }

@@ -7,7 +7,7 @@ class App extends Component{
         super()
         this.state = {
             playerName: 'Chris',
-            opponentName: 'Philip John Reidy'
+            opponentName: 'David Carmichael'
         }
     }
 

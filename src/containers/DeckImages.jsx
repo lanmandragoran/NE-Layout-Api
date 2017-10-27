@@ -56,6 +56,7 @@ import AceClubs from "../cards/AC.svg"
 
 import Back from "../cards/HuskiesBack.svg"
 import Table from '../blackJackBoard.svg'
+import Pile from '../cards/CardPile.svg'
 
 
 const DeckImages = {
@@ -120,7 +121,8 @@ const DeckImages = {
         Ace: AceDiamonds
     },
     Back: Back,
-    Table: Table
+    Table: Table,
+    Pile: Pile
 }
 
 export default DeckImages

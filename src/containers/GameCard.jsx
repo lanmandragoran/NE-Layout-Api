@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import ReactCardFlip from 'react-card-flip'
 import DeckImages from './DeckImages'
+import styled from 'styled-components'
 import './Images.css'
 
 class GameCard extends Component {
@@ -22,13 +23,13 @@ class GameCard extends Component {
               <ReactCardFlip isFlipped={this.state.isFlipped}>
               <div key="front">
               <img style={{height: '100%', width: '100%'}}
-                src={DeckImages.Hearts.Jack}
+                src={DeckImages.Back}
                 onClick={this.handleClick}
               />
             </div>
             <div key="back">
               <img style={{height: '100%', width: '100%'}}
-                src={DeckImages.Back}
+                src={DeckImages.Hearts.Jack}
                 onClick={this.handleClick}
               />
             </div>

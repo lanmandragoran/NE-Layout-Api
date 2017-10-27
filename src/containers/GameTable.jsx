@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import DeckImages from './DeckImages'
 import GameCard from './GameCard'
 import styled from 'styled-components'
+import './Images.css'
 
 const TableStyle = styled.div`width: 90%;
                     height: 80%;
@@ -20,19 +21,21 @@ const TableStyle = styled.div`width: 90%;
 const GameTable = () => {
     return (
         <div>
+       
             <TableStyle>
                 <img src={DeckImages.Table}/>
             </TableStyle>
+            
+            <div className='ele' style={{height: '6%', width: '6%', position: 'absolute', marginLeft: '31%', marginTop: '14%', zIndex: '6'}}>
+                    <GameCard/>
+            </div>
+            
 
-            <div style={{height: '7%', width: '7%', marginLeft: '40%', paddingTop: '45%', position: 'absolute'}}>
+            <div style={{height: '6%', width: '6%', position: 'absolute', marginLeft: '32%', marginTop: '14%', zIndex: '7'}}>
                 <GameCard/>
             </div>
 
-            <div style={{height: '7%', width: '7%', marginLeft: '50%', paddingTop: '45%', position: 'absolute'}}>
-                <GameCard/>
-            </div>
-
-            <div style={{height: '7%', width: '7%', marginLeft: '60%', paddingTop: '45%', position: 'absolute'}}>
+            <div style={{height: '6%', width: '6%', position: 'absolute', marginLeft: '32%', marginTop: '14%', zIndex: '8',}}>
                 <GameCard/>
             </div>
         </div>

@@ -16,9 +16,5 @@ class Deck extends Component{
         
     }
 
-    componentDidUpdate(){
-        if(this.state.hasId) {
-            
-        }
     }
 }
